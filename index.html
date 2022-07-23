@@ -530,8 +530,8 @@ namafile=b; return 1}}
     if (video.paused || video.ended) {
       return;
     }
-    ctx_tmp.drawImage(video, 0, 0, lebar, tinggi );
-    let frame = ctx_tmp.getImageData(0, 0, lebar , tinggi );
+    ctx_tmp.drawImage(video, 0, 0, 1280, 820 );
+    let frame = ctx_tmp.getImageData(0, 0,  1280, 820 );
 
     ctx_tmp.drawImage(video2, 0, 0, video2.width , video2.height );
     let frame2 = ctx_tmp.getImageData(0, 0, video2.width , video2.height );
