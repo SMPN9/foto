@@ -296,7 +296,7 @@ z-index:1}
 </head>
 <body>
 <label id='lab'></label>
-<video id='video' style='display:block' controls></video>
+<video id='video' style='display:none' ></video>
 <div style='margin:0px;padding:0px'><center>
 <video id='vid1' style='width:100%;display:block'></video>
 </center></div>
@@ -322,7 +322,7 @@ z-index:1}
       start();
    function start(){   
       cs.style.display='none'
- navigator.mediaDevices.getUserMedia({audio:false,video: true, video:{facingMode: 'environment',width:800,height:450}}) // camera depan: user : environment
+ navigator.mediaDevices.getUserMedia({audio:false,video: true, video:{facingMode: 'environment',width:1280,height:820}}) // camera depan: user : environment
  .then(stream => {
  vid.srcObject = stream;
    vid2.srcObject=stream;
@@ -497,7 +497,7 @@ namafile=b; return 1}}
    
     <div>
     <!--  <video id="video" width="800" src="video2.mp4" autoplay muted loop></video>-->
-      <canvas id="output-canvas" width="800" height="1000"></canvas>
+      <canvas id="output-canvas" style="width:100%" </canvas>
     </div>
      
 	   <button onclick="gbr()">Tes</button>
