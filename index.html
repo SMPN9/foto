@@ -509,8 +509,8 @@ namafile=b; return 1}}
       
         video2 = document.createElement('img');
         video2.src = "fire.jpg"
-        video2.width=450;
-        video2.height=800;
+        video2.width=video.videoWidth;
+        video2.height= video.videoHeight;
         c1 = document.getElementById('output-canvas');
         ctx1 = c1.getContext('2d');
 
