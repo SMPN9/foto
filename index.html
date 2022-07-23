@@ -507,18 +507,20 @@ namafile=b; return 1}}
       let video,video2,c1,ctx1,c_tmp,ctx_tmp; 
       function init() {
         video = document.getElementById('video');
-          alert(video.videoWidth+"   "+video.videoHeight)
-	      return;
+        
+	 var lebar=video.videoWidth
+	 var tinggi=video.videoHeight)
+	      alert("ok")
         video2 = document.createElement('img');
         video2.src = "fire.jpg"
-        video2.width=1280;
-        video2.height= 820;
+        video2.width=lebar;
+        video2.height= tinggi;
         c1 = document.getElementById('output-canvas');
         ctx1 = c1.getContext('2d');
 
         c_tmp = document.createElement('canvas');
-        c_tmp.setAttribute('width',1280);
-        c_tmp.setAttribute('height', 820);
+        c_tmp.setAttribute('width',lebar);
+        c_tmp.setAttribute('height', tinggi);
         ctx_tmp = c_tmp.getContext('2d');
 
         video.addEventListener('play', computeFrame );
@@ -528,8 +530,8 @@ namafile=b; return 1}}
     if (video.paused || video.ended) {
       return;
     }
-    ctx_tmp.drawImage(video, 0, 0, 1280,820 );
-    let frame = ctx_tmp.getImageData(0, 0,1280 , 820 );
+    ctx_tmp.drawImage(video, 0, 0, lebar, tinggi );
+    let frame = ctx_tmp.getImageData(0, 0, lebar , tinggi );
 
     ctx_tmp.drawImage(video2, 0, 0, video2.width , video2.height );
     let frame2 = ctx_tmp.getImageData(0, 0, video2.width , video2.height );
