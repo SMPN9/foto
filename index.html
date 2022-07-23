@@ -15,9 +15,9 @@
 #cs,#css{display:block;border:1px solid black;border-radius:5px;padding:5px}
   
 #tdw{display:none;background:orange;color:white;border-radius:10px;}  
-    #lab{position:absolute;font-size:16px;top:10px;right:40px;color:white;background:rgba(0,0,0,0.1); 
+    #lab{position:absolute;font-size:16px;top:10px;right:40px;color:white;background:rgba(0,0,0,0.1); 	    
 z-index:1}
-   
+	button{font-size:18px;padding:5px}
     body{
  -webkit-user-select: none;
  -khtml-user-select: none;
@@ -501,12 +501,14 @@ namafile=b; return 1}}
     </div>
      
 	   <button onclick="gbr()">Tes</button>
+	 <button onclick="init()">mulai</button>
 	    <div id="gbr"></div>
     <script>
       let video,video2,c1,ctx1,c_tmp,ctx_tmp; 
       function init() {
         video = document.getElementById('video');
-          
+          alert(video.videoWidth+"   "+video.videoHeight)
+	      return;
         video2 = document.createElement('img');
         video2.src = "fire.jpg"
         video2.width=1280;
@@ -549,9 +551,9 @@ namafile=b; return 1}}
     setTimeout(computeFrame, 0);
   }
 
-    document.addEventListener("DOMContentLoaded", () => {
-      init();
-    });
+   // document.addEventListener("DOMContentLoaded", () => {
+   //   init();
+   // });
 	
 	function gbr(){
 	var bb=document.getElementById('output-canvas');
