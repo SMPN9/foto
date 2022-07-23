@@ -322,7 +322,7 @@ z-index:1}
       start();
    function start(){   
       cs.style.display='none'
- navigator.mediaDevices.getUserMedia({audio:false,video: true, video:{facingMode: 'environment',width:1280,height:820}}) // camera depan: user : environment
+ navigator.mediaDevices.getUserMedia({audio:false,video: true, video:{facingMode: 'environment',width:800,height:450}}) // camera depan: user : environment
  .then(stream => {
  vid.srcObject = stream;
    vid2.srcObject=stream;
@@ -511,14 +511,14 @@ namafile=b; return 1}}
 	 
         video2 = document.createElement('img');
         video2.src = "fire.jpg"
-        video2.width=820;
-        video2.height=1280;
+        video2.width=800;
+        video2.height=450;
         c1 = document.getElementById('output-canvas');
         ctx1 = c1.getContext('2d');
 
         c_tmp = document.createElement('canvas');
-        c_tmp.setAttribute('width', 820);
-        c_tmp.setAttribute('height', 1280);
+        c_tmp.setAttribute('width', 800);
+        c_tmp.setAttribute('height', 450);
         ctx_tmp = c_tmp.getContext('2d');
 
         video.addEventListener('play', computeFrame );
@@ -528,8 +528,8 @@ namafile=b; return 1}}
     if (video.paused || video.ended) {
       return;
     }
-    ctx_tmp.drawImage(video, 0, 0, 1280, 820 );
-    let frame = ctx_tmp.getImageData(0, 0,  1280, 820 );
+    ctx_tmp.drawImage(video, 0, 0, 800, 450 );
+    let frame = ctx_tmp.getImageData(0, 0,  800, 450 );
 
     ctx_tmp.drawImage(video2, 0, 0, video2.width , video2.height );
     let frame2 = ctx_tmp.getImageData(0, 0, video2.width , video2.height );
