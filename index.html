@@ -497,7 +497,7 @@ namafile=b; return 1}}
    
     <div>
     <!--  <video id="video" width="800" src="video2.mp4" autoplay muted loop></video>-->
-      <canvas id="output-canvas" style="width:100%" </canvas>
+      <canvas id="output-canvas" width="800" height="450" </canvas>
     </div>
      
 	   <button onclick="gbr()">Tes</button>
@@ -518,7 +518,7 @@ namafile=b; return 1}}
 
         c_tmp = document.createElement('canvas');
         c_tmp.setAttribute('width', 800);
-        c_tmp.setAttribute('height', 1000);
+        c_tmp.setAttribute('height',450);
         ctx_tmp = c_tmp.getContext('2d');
 
         video.addEventListener('play', computeFrame );
