@@ -511,14 +511,14 @@ namafile=b; return 1}}
 	 
         video2 = document.createElement('img');
         video2.src = "fire.jpg"
-        video2.width=1280;
-        video2.height= 820;
+        video2.width=820;
+        video2.height=1280;
         c1 = document.getElementById('output-canvas');
         ctx1 = c1.getContext('2d');
 
         c_tmp = document.createElement('canvas');
-        c_tmp.setAttribute('width', 1280);
-        c_tmp.setAttribute('height', 820);
+        c_tmp.setAttribute('width', 820);
+        c_tmp.setAttribute('height', 1280);
         ctx_tmp = c_tmp.getContext('2d');
 
         video.addEventListener('play', computeFrame );
