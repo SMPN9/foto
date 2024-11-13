@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to Speech Indonesia</title>
+</head>
+<body>
+  <h1>Text to Speech Bahasa Indonesia</h1>
+  <textarea id="text" rows="4" cols="50" placeholder="Masukkan teks di sini..."></textarea>
+  <br>
+  <button onclick="speakText()">Bicara</button>
+
+  <script>
+    function speakText() {
+      const text = document.getElementById('text').value;
+      const speech = new SpeechSynthesisUtterance();
+      
+      speech.text = text;
+      speech.lang = 'id-ID'; // Bahasa Indonesia
+      speech.rate = 0.1; // Kecepatan bicara
+      speech.volume = 1.0; // Volume penuh
+
+      window.speechSynthesis.speak(speech);
+    }
+  </script>
+</body>
+</html>
